@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" /> 
+        <meta name="Tom McNulty" content="tom.mcnulty.in">
+		<title>Tom McNulty</title>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+	</head>
+	
+<body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <div id="wrapper">
+		<div class="nav">
+			<div class="face"><img src="../assets/face_230.png" alt="Picture of Tom McNulty"></div>
+        	<div class="info">
+            	<b>Tom McNulty - Systems Administrator</b>
+                <p>(703) 332-9867</p>
+                <p>tom@mcnulty.in</p>
+            </div>
+                
+            <br />
+			<div id="links">
+            	<ul>
+					<li><a href="../index.html">Home</a></li>
+            		<li><a href="../projects.html">Projects</a></li>
+            		<li><a href="../resume.html">Resume</a></li>
+            		<li><a href="../personal.html">Personal</a></li> 
+            	</ul>
+            </div>
+            <div class="footer">Copyright 2017 - <a style="text-decoration:none;" href="lockhartgifs/">Tom McNulty</a></div>
+			</div>
+      
+			<div id="content">
+    			<h1>Radio Intercoms</h1>
+				<hr />
+                <p>Lemons safety regulations require teams to have contact with the drivers. They specify that a pit board, a simple board with the ability to snap numbers or messages to is fine. I've wanted to build a set of helmet mounted intercoms for a while now, mostly for use on motorcycles during group rides. My vision was a typical cheap Baofeng VHF radio, with adaptations; a microphone in the chin guard, speakers in the ears, and a Push To Talk (PTT) button in the glove. Easy to hear, cheap, ergonomic. Simple electrically, and adaptable. It was something I was excited to build, and it was exactly what we needed over a pit board.</p>
+              <p>The Baofeng UV-5R is an inexpensive, handheld, dual-band FM transceiver. It uses a K1 speaker/mic pinout.</p>
+                <figure>
+				<img src="../assets/dualplug.jpg" alt="A Kenwood K1 speaker mic pinout."/>
+				<figcaption>A Kenwood K1 speaker mic pinout. <a href="http://www.miklor.com/COM/UV_Technical.php">Image credit miklor.com</a></figcaption>
+			  </figure>
+              <p>This circuit is simple and easily modified. It didn't take long to extend leads from an existing speaker mic to a glove button and to relocate the microphone and speakers. The first version prototype was simply that, the board was tucked into the helmet and wires ran down to a K1 connector. It worked decently for the first race but the car wasn't on the track enough to really merit significant amounts of communication. Version 2 was planned to use a pit crew headset as a test platform. I found some ear protection online with speakers and an aux jack, the plan was to split the speakers off the radio and put them into the ear protection, and attach a small boom mic to the casing, and run that back into the handset. Something like this.</p>
+              <figure>
+				<img src="../assets/headset.jpg" alt="Stupid picture of me wearing the headset."/>
+				<figcaption>The headset pre-wiring.</figcaption>
+			  </figure>
+              <p>This looked great but was unfortunately a total failure. The radio did not have enough power to drive the speakers in the headset. I needed to amplify the signal and I only had something like 6 days. That's not enough to get a <a href="https://www.adafruit.com/product/987">tiny amplifier board</a> and build an untested circuit from scratch. I needed a quick and dirty version to prototype with. I had a guitar amplifier for use with headphones that had an aux input. I rewired the connectors to the radio to go into the amplifier, which meant I had to rewire the rest of the circuit, which meant adding the PTT button there.</p>
+              <figure>
+				<img src="../assets/system.jpg" alt="The final system."/>
+				<figcaption>The headset pre-wiring.</figcaption>
+			  </figure>
+              <br />
+              </div>
+		</div>
+	</body
+></html>

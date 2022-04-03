@@ -1,0 +1,248 @@
+ html, body
+ {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+ 	color:white;
+}
+
+#wrapper div {
+    display: inline-block;
+}
+
+#wrapper{
+    width:100%;
+    height: 100%;
+}
+
+.fake /*Allow content to be positioned next to a fixed element*/
+{
+  position: absolute;
+  left: 0em;
+  top: 0em;
+  color: #000;
+}
+.nav
+{
+	/*position:fixed;
+	float:left;
+	z-index:1;*/
+	height:100%;
+	width:26em;
+	background-color:#29807B;
+	color:white;
+	text-align:center;
+	position:fixed;
+}
+
+#content
+{
+  /*position: relative;
+  left:50%;
+  width: 46em;*/
+  height: 100%;
+  background: #f2f2f2;
+  color:black;
+  margin-left:25%;
+  padding:5px;
+  padding-right:3em;
+  line-height:1.4;
+}
+
+#error
+{
+  height: 100%;
+  background: #f2f2f2;
+  color:black;
+  margin-left:25%;
+  padding:5px;
+  padding-right:3em;
+  line-height:1.4;
+}
+
+#content img
+{
+   width: 50%;
+}
+
+.print
+{
+	position: fixed;
+  	right:1em;
+	bottom:1em;
+}
+	
+
+h1
+{
+	color: #295a80;
+	font-weight:900;
+	font-size:6em;
+	margin-top:5px;
+	margin-bottom:5px;}
+
+h2
+{
+	color: #295a80;
+	font-weight:900;
+	font-size:4em;
+	margin-top:5px;
+	margin-bottom:5px;}
+
+h3
+{
+	color: #295a80;
+	font-weight:900;
+	font-size:2em;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.footer
+{
+	font-size:10px;
+	position:relative;
+	/*top: -4em;*/
+	width:100%;
+}
+
+.title
+{
+	font-size:48px;
+	font-weight:900;
+	margin-left:50%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.info
+{
+	color:inherit;
+	font-weight:700;
+	width:100%;
+}
+
+.info img {
+    display: inline-block;
+    height: 5%;
+    width: 5%;
+    vertical-align: middle;
+}
+
+.face
+{
+	padding-top:10px;
+	padding-bottom:10px;
+	width:100%;
+}
+
+
+#links
+{
+	color:white;
+	font-size:20px;
+	font-weight:bold;
+	background:#29807B;
+	line-height:100px;
+	width:100%;
+}
+	
+
+#links ul
+{
+        list-style-type: none;
+		margin-left:-40px;
+} 
+
+#links li
+{
+        margin: 0px 0;
+}
+
+#links li a
+{ 
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+}
+
+ * html #links li a {  /* make hover effect work in IE */
+}
+
+#links li a:hover
+{
+    background: #1d5956;
+	color:white;
+	text-decoration:none;
+ 	/*-o-transition:color .1s ease-out, background .5s ease-in;
+  	-ms-transition:color .1s ease-out, background .5s ease-in;
+  	-moz-transition:color .1s ease-out, background .5s ease-in;
+  	-webkit-transition:color .1s ease-out, background .5s ease-in;
+  	/* ...and now override with proper CSS property */
+  	transition:color .2s ease-out, background .2s ease-in;;
+}
+
+#links li a:visited 
+{
+    color: white;
+}
+
+#links li a:link 
+{
+    color: white;
+}
+
+a:link 
+{
+    color: white;
+}
+
+a:hover
+{
+    color: black;
+}
+
+a:visited 
+{
+    color: darkgrey;
+}
+
+#content a:link
+{
+	color:black;
+	text-decoration:underline;
+}
+
+#content a:hover
+{
+	/*background:white;*/
+	color:darkgrey;
+	text-decoration:underline;
+ 	/*-o-transition:color .1s ease-out, background .2s ease-in;
+  	-ms-transition:color .1s ease-out, background .2s ease-in;
+  	-moz-transition:color .1s ease-out, background .2s ease-in;
+  	-webkit-transition:color .1s ease-out, background .2s ease-in;
+  	/* ...and now override with proper CSS property */
+  	transition:color .2s ease-out, background .2s ease-in;;
+}
+
+#content a:visited
+{
+    color: darkgrey;
+}
+
+blockquote
+{
+	font-family: Garamond, serif;
+	font-size:1.7em;
+	color:#295a80;
+}
+
+figcaption
+{
+	/*font-family: 'PT Serif', serif;*/
+	text-align:left;
+}

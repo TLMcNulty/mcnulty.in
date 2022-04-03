@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mcnulty.in">
+    <meta name="author" content="Tom McNulty">
+
+    <title>Thyro | Digital visual portal</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="./dist/wing.css" />
+    <link rel="stylesheet" type="text/css" href="./fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    
+  </head>
+
+  <body>
+    <div class="nav left-align container">
+      <div class="nav-item"><a href="index.html">Back to home</a></div>
+    </div>
+
+    <section class="center fixed">
+    <div></div>
+    </section>
+
+    <section class="hero container center text-center">
+      <div>
+	<video class="container center hide-phone" autoplay width="640" height="480" loop>
+	  <source src="img/mp4-cut.webm" type="video/webm" />
+	  Alternate text for video media: This short video shows a monitor hanging on a 45 degree sloping interior ceiling wall displaying video of our sun's surface. The camera pans to demonstrate parallax provided by the system documented on this page.
+	</video>
+      </div>
+      <div>
+     <!--/section>
+     <section class="hero container center text-center"-->
+       <div> 
+         <h3>Thyro | Digital visual portal</h3>
+	 <p class="content">From the Greek 'paráthyro' for 'window', Thyro is an art installation and home interaction platform designed to give an almost magic look into virtually limitless landscapes and locales. Powered by the Unity game engine and Microsoft Kinect for Windows, the system can track multiple users and respond to voice or gesture commands.</p>
+       </div>
+    </section>
+
+    <section id="details" class="container center">
+      <div>
+        <h3 class="header">KAVE Unity Plugin</h3>
+        <p class="content"><p>KAVE approximately stands for Kinect based automatic virtual environment, a Unity plugin in that maps user skeleton data to camera positions to allow for position based perspective specfic display of an environment. The plugin allows you to map to walls and floors to project onto, but also provides a pane functionality. This allows us to create a screen in Unity that renders as though it were a window looking out into the game engine. Many thanks and boundless respect to Afonso Gonçalves. <a href="https://neurorehabilitation.m-iti.org/tools/en/kave">NeurorehabLab KAVE Overview.</a></p>
+	<h3 class="header">Hardware</h3>
+	<p class="content"><p>Windows 10 runs an Intel Skull Canyon NUC6I7KYK. It can get bogged down depending on what's going but it beats the previous generation NUC I was developing with before upgrading to go on the wall. The machine is mounted to steel crossbars the monitor hangs from. This structure also provides mounting points for the power and Kinect connections, and is secured against the wall with a small tie. Experiments with magnetic latches freed itself too often and swing down. The mount/structure is an area for further work, an adjustable linkage that allowed for more freedom would be preferable. The Kinect is mounted on a platform below the screen. <a href="https://ark.intel.com/content/www/us/en/ark/products/89187/intel-nuc-kit-nuc6i7kyk.html">Intel NUC6I7KYK Specs</a></p>
+      </div>
+    </section>
+    <section>
+      <div class="hero container content center carousel">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./js/swiper.js"></script>
+        <script>
+  	  $('.carousel').swiper({
+    	    imageList : ['./img/back_hardware.jpg', './img/hardware_wall.jpg', './img/hanging.jpg', './img/gear.jpg'],
+            animateType : 'animate',
+            changeBtn : true,
+            slideBtn : true,
+            isAuto : false,
+          });
+        </script>
+      </div>
+    </section>
+    <section>
+
+    </section>
+    <footer><a href="https://kbrsh.github.io/wing/" id="footer-link"><span id="footer-made">Styled with</span><img src="https://kbrsh.github.io/wing/img/logo.png" alt="Logo" id="footer-logo"/><span id="footer-name">Wing</span></a></footer>
+    <!--script src="/path/to/cdn/jquery.min.js"></script-->
+    <script src="./js/lib/moon.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+

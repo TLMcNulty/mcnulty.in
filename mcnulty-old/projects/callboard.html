@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" /> 
+        <meta name="Tom McNulty" content="tom.mcnulty.in">
+		<title>Tom McNulty</title>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,700italic' rel='stylesheet' type='text/css'>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
+	</head>
+	
+<body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <div id="wrapper">
+		<div class="nav">
+			<div class="face"><img src="../assets/face_230.png" alt="Picture of Tom McNulty"></div>
+        	<div class="info">
+            	<b>Tom McNulty - Systems Administrator</b>
+                <p>(703) 332-9867</p>
+                <p>tom@mcnulty.in</p>
+            </div>
+                
+            <br />
+			<div id="links">
+            	<ul>
+					<li><a href="../index.html">Home</a></li>
+            		<li><a href="../projects.html">Projects</a></li>
+            		<li><a href="../resume.html">Resume</a></li>
+            		<li><a href="../personal.html">Personal</a></li> 
+            	</ul>
+            </div>
+            <div class="footer">Copyright 2017 - <a style="text-decoration:none;" href="lockhartgifs/">Tom McNulty</a></div>
+			</div>
+      
+			<div id="content">
+    			<h1>CallBoard</h1>
+				<hr />
+
+				<p>Automatic and autonomous 911 page display.</p>
+				<p>CallBoard was a nifty little piece of software I worked on with a friend and coworker of mine during my time at <a href="http://ambulance.rit.edu">RIT Ambulance</a>. It was designed to accept serial dumps out of a Critical Response M1501 Digital Pager and clean the information for display and notification to responders. Over the course of a few years the system went from text only to colorized and accessible over the internet. Ultimately it notified dozens of people about hundreds of emergencies reliably and at a low cost using Amazon Web Services Simple Notification Service.</p>
+            
+				<h4> Version .1 | ~September 2015</h4>
+				<p>My efforts have finally come to fruition with the implementation of Version .1. CallBoard currently receives text based digital pages from Monroe County 911 ECD. These pages typically have a location, priority, code, and description. They are used to reference location and information before and during the emergency response. CallBoard takes advantage of an old Critical Response M1501 Digital Pager that dumps to a serial output. The output is messy and requires parsing before it can be inserted into the SQL database, so it needs to be validated, parsed, and sterilized.</p>
+				<figure>
+				<img src="../assets/Capture.PNG" alt="A rough page capture before sorting"/>
+				<figcaption>A rough page capture before sorting</figcaption>
+				</figure>
+            
+				<p>A Java program takes the input, cats the strings together, and makes it pretty before connecting to SQL and inserting the statement. The database is then read by PHP and inserted into a generated HTML doc through Java Script.</p>    
+				<figure>
+				<img src="../assets/FinalOutpu.png" alt="The final output. Pretty."/>
+				<figcaption>The final output. Pretty.</figcaption>
+				</figure>
+            
+				<p>Version .1 uses an HTML Meta http refresh command to update the clock and database queries. Later versions will be static pages with pushed notifications.</p>   
+            
+				<h4> Version 1 | January 2016</h4>
+				<figure>
+				<img src="https://raw.githubusercontent.com/pete800/CallBoard/master/Pictures/logo.png" alt="CallBoard Logo"/>
+				<figcaption>The CallBoard logo I made to psych myself up</figcaption>
+				</figure>
+				<p>As I became more confident in the systems ability to self correct and report back to an instance of PRTG I set up for monitoring I began to plan features. I wanted:</p>
+				<ul>
+					<li>Robust monitoring</li>
+					<li>The ability to self heal</li>
+					<li>AJAX polling instead of HTTP refreshes</li>
+					<li>Notification via SMS short code</li>
+					<li>A pretty screen that turned on automatically</li>
+					<li>Ability to control hardware like lights, sirens, or motors</li>
+					<li>Root CA SSL</li>
+				</ul>
+        
+				<p>I quickly set up basic uptime ping checks one night so I could make sure the Pi was plugged in but I added a number of checks to make sure the number of processes of the .jar was OK, that apache was running and that I was getting HTML that I expected from the page, and not just a 200 OK message. I also was building out notification at this point so I spun up a quick dev instance of the site and database, which allowed me to test pushing new data, as well as add AWS SNS notification to my PRTG instance.</p>
+        
+				<p>A full version of Raspian provided the ability to view a webpage, as well as run all the software I needed to have this all come together. It's a Debian based distro for the Raspberry Pi and well supported. The Pi ran a .jar that would automatically open the serial port and start listening. A small command was cronned to check for the presence of the jar in the process list and start it if it was not there. This rudimentary solved the self-healing wish because occasionally some gross character would get through to the database insert and crash the JVM.</p>
+        
+				<p>The very first version of the system refreshed the HTML page it displayed every 15 seconds, which would repoll the database for the record with the highest ID and display it. It was a 15 second solution but I preferred to clean it up with the newer version. At this point in my career I wasn't very confident in web applications so the newer solution was barely better. The index HTML would run a function every second that called a PHP script that fetched the most current data from the database and displayed it as a JSON string. The HTML page would then compare this string against what it had in memory and if it differed, rewrite the HTML elements with the new data and change the CSS. I had a lot of trouble building a blinking class that would refresh when the data changed and though it worked a few times ended up leaving it out.</p>
+        
+				<p>Notification was originally accomplished with an easy GroupMe bot. It was quick and easy but I wanted things to come in consistently via SMS short code and not the wacky GroupMe SMS gateway. This was easily solved by created an SNS topic having the portion of the script that updated the HTML page fire off an API call to Amazon when new data was detected. Subscribing everyone was easy and I found it's hard to stay within the AWS free tier on SNS. 
+				<p>I was initially really proud of the was I displayed the data. I remember an hour long discussion at a whiteboard with Peter one night about where the time should go. Though as I looked at the screen longer and longer I found that I liked it less and less. It turned on rather abruptly in the middle of the night when we got a call and jarring. It was also cluttered and hard to read. I rebuilt it to be a little sleeker.
+				<figure>
+				<img src="https://raw.githubusercontent.com/pete800/CallBoard/master/Pictures/Current%20View.png" alt="The redesigned HTML interface"/>
+				<figcaption>The redesigned HTML interface</figcaption>
+				</figure>
+        
+				<p>This re-coloring was the real meat of the rebrand and got everyone a little more excited about it. The reversal of the priority to a negative space was way punchier and drove home the importance of the color much more. I also liked the way giving the call time a background color implied that it was the call time and not the current time. The darker scheme was much more pleasant in the dark as well. </p>
+
+				<p>The Pi was connected to a USB to Serial adapter that was plugged into the pager. They come with GPIO pins which let you do a host of cool things, I couldn't switch 120VAC with it but was able to control a relay that could. My components were different, but <a href="http://www.instructables.com/id/Controlling-Any-Device-Using-a-Raspberry-Pi-and-a-/">this write up</a> gives you a solid idea. I put a string of lights on this, as well as the monitor for the HTML page itself. I'd been keeping it in sleep mode but that kept the backlight on and people complained during overnights.</p>
+        
+				<p>Finally this project was also my introduction to SSL in an enterprise/large environment. I'd secured the connection to the page from the beginning, as well as making sure it wasn't publicly accessible. Not many people had credentials to view the data this displayed. This information went out over unsecured radio waves so was not protected information, but I definitely believe in doing more than the minimum required when it comes to securing systems or data like this. I learned that RIT was a CA during this and was able to have them issue me a certificate. That little green lock screen made me happy.</p>
+        
+				</p>In conclusion this project wasn't much in the way of software development for me, I have Peter to thank for carrying that load, but I devoted an intense amount of attention to the reliability and insight that I had into everything that ran this system and it was an intense learning experience for me. I'm deeply proud of what Peter and I built.</p>												<br />
+			</div>
+		</div>
+	</body
+></html>

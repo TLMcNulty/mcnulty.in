@@ -1,0 +1,35 @@
+{
+  "name": "gemini",
+  "description": "Gemini Video",
+  "main": "index.html",
+  "keywords": [
+    "gemini",
+    "video",
+    "productions",
+    "film",
+    "cinema",
+    "brookline",
+    "boston",
+    "freelance",
+    "contract",
+    "cheap",
+    "professional"
+  ],
+  "authors": [
+    "Tom McNulty"
+  ],
+  "license": "MIT",
+  "homepage": "https://geminivideo.net",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.6.9",
+    "bootstrap": "^4.0.0"
+  }
+}
