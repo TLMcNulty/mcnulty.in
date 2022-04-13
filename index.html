@@ -1,156 +1,103 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<!doctype html>
 <html>
-<head>
-  <title>Welcome to CentOS</title>
-  <style rel="stylesheet" type="text/css"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="mcnulty.in">
+    <meta name="author" content="Tom McNulty">
 
-	html {
-	background-image:url(img/html-background.png);
-	background-color: white;
-	font-family: "DejaVu Sans", "Liberation Sans", sans-serif;
-	font-size: 0.85em;
-	line-height: 1.25em;
-	margin: 0 4% 0 4%;
-	}
+    <title>Tom McNulty</title>
 
-	body {
-	border: 10px solid #fff;
-	margin:0;
-	padding:0;
-	background: #fff;
-	}
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="./dist/wing.css" />
+    <link rel="stylesheet" type="text/css" href="./fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    
+  </head>
 
-	/* Links */
+  <body>
+    <!--
+    <section class="hero container center text-center">
+      <div>
+        <img src="./img/face_230.png" alt="Wing Logo" height="125">
+        <h3>Tom McNulty</h3>
+        <h5></h5>
+      </div>
+    </section>
+     <div class="nav horizontal-align">
+      <div class="nav-item"><a href="#about">About</a></div>
+      <div class="nav-item"><a href="#projects">Projects</a></div>
+      <div class="nav-item"><a href="./docs/tom_mcnulty_resume_1_2019.pdf">Resume</a></div>
+     </div>
+    <section id="about" class="container center">
+      <div>
+        <h3 class="header">About me</h3>
 
-	a:link { border-bottom: 1px dotted #ccc; text-decoration: none; color: #204d92; }
-	a:hover { border-bottom:1px dotted #ccc; text-decoration: underline; color: green; }
-	a:active {  border-bottom:1px dotted #ccc; text-decoration: underline; color: #204d92; }
-	a:visited { border-bottom:1px dotted #ccc; text-decoration: none; color: #204d92; }
-	a:visited:hover { border-bottom:1px dotted #ccc; text-decoration: underline; color: green; }
- 
-	.logo a:link,
-	.logo a:hover,
-	.logo a:visited { border-bottom: none; }
 
-	.mainlinks a:link { border-bottom: 1px dotted #ddd; text-decoration: none; color: #eee; }
-	.mainlinks a:hover { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
-	.mainlinks a:active { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
-	.mainlinks a:visited { border-bottom:1px dotted #ddd; text-decoration: none; color: white; }
-	.mainlinks a:visited:hover { border-bottom:1px dotted #ddd; text-decoration: underline; color: white; }
+      </div>
+    </section>
+    -->
 
-	/* User interface styles */
+    <section id="projects" class="container left">
+      <!--div class="guide-section"-->
+      <div class="cards">
 
-	#header {
-	margin:0;
-	padding: 0.5em;
-	background: #204D8C url(img/header-background.png);
-	text-align: left;
-	}
-
-	.logo {
-	padding: 0;
-	/* For text only logo */
-	font-size: 1.4em;
-	line-height: 1em;
-	font-weight: bold;
-	}
-
-	.logo img {
-	vertical-align: middle;
-	padding-right: 1em;
-	}
-
-	.logo a {
-	color: #fff;
-	text-decoration: none;
-	}
-
-	p {
-	line-height:1.5em;
-	}
-
-	h1 { 
-		margin-bottom: 0;
-		line-height: 1.9em; }
-	h2 { 
-		margin-top: 0;
-		line-height: 1.7em; }
-
-	#content {
-	clear:both;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-bottom: 30px;
-	border-bottom: 5px solid #eee;
-	}
-
-    .mainlinks {
-        float: right;
-        margin-top: 0.5em;
-        text-align: right;
-    }
-
-    ul.mainlinks > li {
-    border-right: 1px dotted #ddd;
-    padding-right: 10px;
-    padding-left: 10px;
-    display: inline;
-    list-style: none;
-    }
-
-    ul.mainlinks > li.last,
-    ul.mainlinks > li.first {
-    border-right: none;
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-<div id="header">
-
-    <ul class="mainlinks">
-        <li> <a href="http://www.centos.org/">Home</a> </li>
-        <li> <a href="http://wiki.centos.org/">Wiki</a> </li>
-        <li> <a href="http://wiki.centos.org/GettingHelp/ListInfo">Mailing Lists</a></li>
-        <li> <a href="http://www.centos.org/download/mirrors/">Mirror List</a></li>
-        <li> <a href="http://wiki.centos.org/irc">IRC</a></li>
-        <li> <a href="https://www.centos.org/forums/">Forums</a></li>
-        <li> <a href="http://bugs.centos.org/">Bugs</a> </li>
-        <li class="last"> <a href="http://wiki.centos.org/Donate">Donate</a></li>
-    </ul>
-
-	<div class="logo">
-		<a href="http://www.centos.org/"><img src="img/centos-logo.png" border="0"></a>
+      	<div class="card">
+          <h5 class="card-header">About me</h5>
+          <p class="card-body">General specialist in connectivity and development. Disciplines I respect and contribute to include linux kernel development, automation, observability, fabrication, music, sailing, and hopefully many yet undiscovered.</p>
+	<div class="card-footer center text-center">
+          <a class="content" href="docs/tom_mcnulty_resume_1_2019.pdf">My Resume</a>
+	  <a class="content" href="docs/public.gpg">Public GPG key</a>
 	</div>
+      </div>      
 
-</div>
+       <div class="card">
+         <h5 class="card-header">Automotive Endurance Racing</h5>
+         <p class="card-body">Le Mans, France. The site of a famous endurance race known as The 24 Hours of Le Mans. It is an example of humanity's engineering marvels, expensive, and driven by professionals. The 24 Hours of Lemons, a state-side parody racing league is none of that. The limit on a build is $500. The cars are barely held together, and explode regularly. The drivers, amateurs, anyone who can pass tech and keep the car upright.</p>
+          <div class="card-footer center text-center">
+            <a class="content" href="https://docs.wotlemons.com">docs.wotlemons.com</a>
+          </div>
+       </div>
 
-<div id="content">
-
-	<h1>Welcome to CentOS</h1>
-
-	<h2>The Community ENTerprise Operating System</h2>
-
-	<p><a href="http://www.centos.org/">CentOS</a> is an Enterprise-class Linux Distribution derived from sources freely provided
-to the public by Red Hat, Inc. for Red Hat Enterprise Linux.  CentOS conforms fully with the upstream vendors
-redistribution policy and aims to be functionally compatible. (CentOS mainly changes packages to remove upstream vendor
-branding and artwork.)</p>
-
-	<p>CentOS is developed by a small but growing team of core
-developers.&nbsp; In turn the core developers are supported by an active user community
-including system administrators, network administrators, enterprise users, managers, core Linux contributors and Linux enthusiasts from around the world.</p>
-
-	<p>CentOS has numerous advantages including: an active and growing user community, quickly rebuilt, tested, and QA'ed errata packages, an extensive <a href="http://www.centos.org/download/mirrors/">mirror network</a>, developers who are contactable and responsive, Special Interest Groups (<a href="http://wiki.centos.org/SpecialInterestGroup/">SIGs</a>) to add functionality to the core CentOS distribution, and multiple community support avenues including a <a href="http://wiki.centos.org/">wiki</a>, <a
-href="http://wiki.centos.org/irc">IRC Chat</a>, <a href="http://wiki.centos.org/GettingHelp/ListInfo">Email Lists</a>, <a href="https://www.centos.org/forums/">Forums</a>, <a href="http://bugs.centos.org/">Bugs Database</a>, and an <a
-href="http://wiki.centos.org/FAQ/">FAQ</a>.</p>
-
-	</div>
-
-</div>
-
-
-</body>
+      <div class="card">
+        <h5 class="card-header">Thyro</h5>
+        <p class="card-body">Thyro is software and hardware that provides a visual portal into a digital environment. Powered by Kinect for Windows and the Unity game engine.</p>
+        <div class="card-footer center text-center">
+          <a class="content" href="./thyro.html">Thyro</a>
+        </div>
+      </div>
+       
+      <div class="card">
+        <h5 class="card-header">mcnulty-fs</h5>
+        <p class="card-body">I've been trying to practice data freedom. Breaking yourself free of behemoth tech is not for the faint of heart but should be done.</p>
+        <div class="card-footer center text-center">
+          <a class="content" href="https://fs.mcnulty.in">fs.mcnulty.in</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h5 class="card-header">Love letter to M. Molin</h5>
+        <p class="card-body">Martin is a composer, musician, multi-instrumentalist, and inventor. His recent updates to the Wintergatan videos left me unable to continue watching without writing.</p>
+        <div class="card-footer center text-center">
+          <a class="content" href="./cher-m-molin.html">Cher M. Molin,</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h5 class="card-header">To those that ride</h5>
+        <p class="card-body">Is motorcycling worth the danger?.</p>
+        <div class="card-footer center text-center">
+          <a class="content" href="./riding.html">Why I seek those that ride</a>
+        </div>
+      </div>
+      
+      </div>
+    </section>
+    <footer><a href="https://kbrsh.github.io/wing/" id="footer-link"><span id="footer-made">Styled with</span><img src="https://kbrsh.github.io/wing/img/logo.png" alt="Logo" id="footer-logo"/><span id="footer-name">Wing</span></a></footer>
+    <script src="./js/lib/moon.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
+
